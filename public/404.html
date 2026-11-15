@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Wings Pro</title>
+    <script>
+      (function() {
+        var path = window.location.pathname;
+        var repo = '/GoldenwingsWebsite';
+        var hasRepo = path.startsWith(repo);
+        var subpath = hasRepo ? path.slice(repo.length) : path;
+        var prefix = hasRepo ? repo : '';
+        window.location.replace(
+          window.location.origin + prefix + '/#' + subpath + window.location.search + window.location.hash
+        );
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
